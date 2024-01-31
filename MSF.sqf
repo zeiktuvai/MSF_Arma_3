@@ -3,14 +3,27 @@
 
 	Mission Support Framework v1.0
 */
-#include "..\MSF_Settings.sqf"
+if (fileExists "..\MSF_Settings.sqf") then
+{
+	#include "..\MSF_Settings.sqf"
+	hint "exists";
+}
+else
+{
+	hint "ERROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults".
+	private _enableRespawnOnPlayer = true;
+	private _RoPFaction = 0;
+	private _night = false;
+	private _ACE_endMission = false;
+	private _ACE_GM_Actions = false;
+};
 
 // Register custom functions
-TFY_fnc_ApplyCustomLoadout = compile preprocessFile "TFY_DLS_Arma3\Functions\TFY_fnc_ApplyCustomLoadout.sqf";
-TFY_fnc_ApplyRespawnInventories = compile preprocessFile "TFY_DLS_Arma3\Functions\TFY_fnc_ApplyRespawnInventories.sqf";
-TFY_fnc_AddPlayerRespawn = compile preprocessFile "TFY_DLS_Arma3\Functions\TFY_fnc_AddPlayerRespawn.sqf";
-TFY_fnc_SetupGMActions = compile preprocessFile "TFY_DLS_Arma3\Functions\TFY_fnc_SetupGMActions.sqf";
-TFY_fnc_GetLoadoutByClass = compile preprocessFile "TFY_DLS_Arma3\Functions\TFY_fnc_GetLoadoutByClass.sqf";
+TFY_fnc_ApplyCustomLoadout = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_ApplyCustomLoadout.sqf";
+TFY_fnc_ApplyRespawnInventories = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_ApplyRespawnInventories.sqf";
+TFY_fnc_AddPlayerRespawn = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_AddPlayerRespawn.sqf";
+TFY_fnc_SetupGMActions = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_SetupGMActions.sqf";
+TFY_fnc_GetLoadoutByClass = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_GetLoadoutByClass.sqf";
 
 // Declare local variables
 private _playerClass = typeOf player;
