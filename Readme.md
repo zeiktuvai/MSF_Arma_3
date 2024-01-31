@@ -6,9 +6,9 @@ The MSF is a collection of tools wrapped into a script framework that makes buil
 
 This framework makes use of ACE 3, which is needed for a lot of the custom interactions to work properly.  
 
-[Loadout Management](#loadout-management)
-[Respawn Features](#respawn-options)
-[ACE 3 Interaction Features](#ace-interaction-features)
+[Loadout Management](#loadout-management)  
+[Respawn Features](#respawn-options)  
+[ACE 3 Interaction Features](#ace-interaction-features)  
 
 **Initial Setup**  
 1. Clone this repo into your mission folder using `git clone https://github.com/zeiktuvai/MSF_Arma_3.git` (You will be able to update it easily if new loadouts are added by moving into the `MSF_Arma_3` folder and running `git pull`).  
