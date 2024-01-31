@@ -3,21 +3,32 @@
 
 	Mission Support Framework v1.0
 */
+// Declare variables
 private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions"];
 
-try 
+// Set default values
+_enableRespawnOnPlayer = true;
+_RoPFaction = 0;
+_night = false;
+_ACE_endMission = false;
+_ACE_GM_Actions = false;
+
+// Try to get user configured settings
+Get_Settings = compile preprocessFile "MSF_Settings.sqf";
+private _settings = call Get_Settings;
+
+// If found set settings, if not throw error.
+if (!isNil "_settings") then
 {
-	#include "..\MSF_Settings.sqf"
-	hint "exists";
+	_enableRespawnOnPlayer = _settings get "_enableRespawnOnPlayer";
+	_RoPFaction = _settings get "_RoPFaction";
+	_night = _settings get "_night";
+	_ACE_endMission = _settings get "_ACE_endMission";
+	_ACE_GM_Actions = _settings get "_ACE_GM_Actions";
 }
-catch
+else
 {
-	hint "EROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults.";
-	 _enableRespawnOnPlayer = true;
-	 _RoPFaction = 0;
-	 _night = false;
-	 _ACE_endMission = false;
-	 _ACE_GM_Actions = false;
+	hint "EROR: MSF Not configured correctly! MSF_Settings.sqf not found, using defaults.";
 };
 
 // Register custom functions
