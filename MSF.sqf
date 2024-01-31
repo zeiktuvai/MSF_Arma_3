@@ -5,14 +5,14 @@
 */
 private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions"];
 
-if (fileExists "..\MSF_Settings.sqf") then
+try 
 {
 	#include "..\MSF_Settings.sqf"
 	hint "exists";
 }
-else
+catch
 {
-	hint "ERROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults.";
+	hint "EROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults.";
 	 _enableRespawnOnPlayer = true;
 	 _RoPFaction = 0;
 	 _night = false;
