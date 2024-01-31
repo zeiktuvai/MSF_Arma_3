@@ -3,6 +3,8 @@
 
 	Mission Support Framework v1.0
 */
+private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions"];
+
 if (fileExists "..\MSF_Settings.sqf") then
 {
 	#include "..\MSF_Settings.sqf"
@@ -11,11 +13,11 @@ if (fileExists "..\MSF_Settings.sqf") then
 else
 {
 	hint "ERROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults.";
-	private _enableRespawnOnPlayer = true;
-	private _RoPFaction = 0;
-	private _night = false;
-	private _ACE_endMission = false;
-	private _ACE_GM_Actions = false;
+	 _enableRespawnOnPlayer = true;
+	 _RoPFaction = 0;
+	 _night = false;
+	 _ACE_endMission = false;
+	 _ACE_GM_Actions = false;
 };
 
 // Register custom functions
