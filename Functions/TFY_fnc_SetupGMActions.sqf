@@ -24,7 +24,8 @@ _box setVehicleVarName "crate";
 crate = _box;
 publicVariable "crate";
 
-_box addAction ["Remove Crate", { deleteVehicle crate; }];
+private _delBox = ["remove_box", "Remove Box","",{ deleteVehicle crate; }, {true}] call ace_interact_menu_fnc_createAction; 
+[_box,0,["ACE_MainActions"],_delBox] call ace_interact_menu_fnc_addActionToObject;
 };
 
 _gm_act = ["GM_Menu", "GM Actions", "", {}, {true}] call ace_interact_menu_fnc_createAction;
