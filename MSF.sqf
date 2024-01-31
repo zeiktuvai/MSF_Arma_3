@@ -121,7 +121,7 @@ if(_ACE_endMission) then
 };
 
 // GM Actions
-if (!isNil _ACE_GM_Actions && _ACE_GM_Actions == true) then
+if (_ACE_GM_Actions == true) then
 {
 	if (vehicleVarName player == 'GM') then 
 	{ 
