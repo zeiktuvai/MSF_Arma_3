@@ -10,7 +10,7 @@ if (fileExists "..\MSF_Settings.sqf") then
 }
 else
 {
-	hint "ERROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults".
+	hint "ERROR: MSF Not configured correctly, MSF_Settings.sqf not found, using defaults.";
 	private _enableRespawnOnPlayer = true;
 	private _RoPFaction = 0;
 	private _night = false;
