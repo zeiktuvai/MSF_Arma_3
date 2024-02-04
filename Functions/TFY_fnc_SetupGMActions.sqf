@@ -18,7 +18,7 @@ params ["_unit"];
 private _crateCode = {
 _box = "Box_NATO_Ammo_F" createVehicle position GM;
 clearItemCargo _box;
-clearMagazineCargo _box;
+clearMagazineCargo _box; 
 [_box, true] call ace_arsenal_fnc_initBox;
 _box setVehicleVarName "crate";
 crate = _box;
