@@ -10,12 +10,13 @@ private _RoPFaction = 0;
 private _night = false;
 
 //Enable End Mission ACE Self interaction option. (Be sure to give a unit the SL or GM variable name; see readme.)
-//Set the trigger name to trig_end_mission for this to work.
+//Set the trigger name to trig_end_mission for this to work. You can use the following hint in the trigger to let players know
+//they can end the mission. 
+// hint parseText "<t color='#808000'>Primary Mission Objectives Complete!</t> CDR/GM use the <t color='#900C3F'>ACE Self</t> interaction menu to end the mission when ready";
 private _ACE_endMission = false;
 
 //Enable GM actions in ACE Self Menu. (Be sure to give a unit the GM variable name).
 private _ACE_GM_Actions = false;
-
 
 //========= DO NOT EDIT BELOW THIS LINE ===========
 private _settings = [];
