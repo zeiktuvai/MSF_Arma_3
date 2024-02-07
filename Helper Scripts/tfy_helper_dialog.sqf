@@ -26,7 +26,7 @@ private _statement = {
 	_params params ["_vals"];
 	
  	[_vals select 0, "SUCCEEDED"] call BIS_fnc_taskSetState;
- 	[_vals select 1, _vals select 2] call bis_fnc_kbtell;	
+ 	[_vals select 1, _vals select 2] remoteExec ["BIS_fnc_kbTell", 2];	
 	if (_vals select 3 != "") then { nul = execVM (_vals select 3); };
 };
 
