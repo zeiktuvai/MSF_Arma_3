@@ -63,7 +63,7 @@ switch (_type) do
 		["NATO_WINTER_SOLDIER_TL", ["TFY_Winter_Rifleman"]],
 		["NATO_WINTER_SOLDIER_M", ["TFY_Winter_Marksman"]],
 		["NATO_WINTER_SOLDIER_SHARPSHOOTER", ["TFY_Winter_Marksman"]],
-		["NATO_WINTER_SNIPER"["TFY_Winter_Marksman"]]
+		["NATO_WINTER_SNIPER", ["TFY_Winter_Marksman"]]
 		];
 	};
 	case 1: {
