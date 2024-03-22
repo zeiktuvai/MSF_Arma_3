@@ -52,7 +52,12 @@ switch (_type) do
 		["B_diver_F", ["TFY_Diver"]],
 		["B_diver_TL_F", ["TFY_Diver"]],
 		["B_diver_exp_F", ["TFY_Diver_Expl"]],
-		["B_soldier_mine_F", ["TFY_MineSpec"]]
+		["B_soldier_mine_F", ["TFY_MineSpec"]],
+		["NATO_WINTER_SOLDIER_A", ["TFY-Winter_Rifleman"]],
+		["NATO_WINTER_SOLDIER", ["TFY-Winter_Rifleman"]],
+		["NATO_WINTER_SOLDIER_LAT", ["TFY-Winter_Rifleman"]],
+		["NATO_WINTER_SOLDIER_LITE", ["TFY-Winter_Rifleman"]],
+		["NATO_WINTER_SOLDIER_LAT2", ["TFY-Winter_Rifleman"]]
 		];
 	};
 	case 1: {
