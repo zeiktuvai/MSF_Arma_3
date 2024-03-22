@@ -59,8 +59,8 @@ switch (_type) do
 		["NATO_WINTER_SOLDIER_GL", ["TFY_Winter_Grenadier"]],
 		["NATO_WINTER_SOLDIER_LAT", ["TFY_Winter_ATRifleman"]],
 		["NATO_WINTER_SOLDIER_LAT2", ["TFY_Winter_ATRifleman"]],
-		["NATO_WINTER_SOLDIER_AT", ["TFY_Winter_ATRifleman"]],
-		["NATO_WINTER_SOLDIER_AA", ["TFY_Winter_AARifleman"]],
+		["NATO_WINTER_SOLDIER_AT", ["TFY_Winter_ATRifleman", "TFY_Winter_AARifleman"]],
+		["NATO_WINTER_SOLDIER_AA", ["TFY_Winter_AARifleman", "TFY_Winter_ATRifleman"]],
 		["NATO_WINTER_SOLDIER_TL", ["TFY_Winter_Rifleman"]],
 		["NATO_WINTER_SOLDIER_M", ["TFY_Winter_Marksman"]],
 		["NATO_WINTER_SOLDIER_SHARPSHOOTER", ["TFY_Winter_Marksman"]],
@@ -71,6 +71,10 @@ switch (_type) do
 		["NATO_WINTER_SOLDIER_MORT", ["TFY_Winter_Gunner"]],
 		["NATO_WINTER_SOLDIER_HEAVYGUNNER", ["TFY_Winter_Gunner"]],
 		["NATO_WINTER_SOLDIER_SL", ["TFY_Winter_Commander"]],
+		["NATO_WINTER_CREW", ["TFY_Winter_VehicleCrewman"]],
+		["NATO_WINTER_SOLDIER_REPAIR", ["TFY_Winter_VehicleCrewman"]],
+		["NATO_WINTER_SOLDIER_ENGINEER", ["TFY_Winter_VehicleCrewman"]],
+		["NATO_WINTER_SOLDIER_MEDIC", ["TFY_Winter_Medic"]],
 		["NATO_WINTER_SOLDIER_UAV", ["TFY_Winter_UAVOperator"]]
 		];
 	};
