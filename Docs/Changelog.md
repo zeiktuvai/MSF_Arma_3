@@ -2,8 +2,11 @@
 
 ## [Unreleased]
 
+## [1.6]
+- Added support for NATO Winter Faction for winter maps.
+
 ## [1.5]
-- Added Mine specialist to loadouts
+- Added Mine specialist to loadouts.
 
 ## [1.0] - Initial Release
 - Brought forward all changes from DLS system 1.5

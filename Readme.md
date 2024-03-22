@@ -28,7 +28,7 @@ The following is a walk through of the different parts of the MSF and how to con
 
 The MSF makes use of custom loadouts defined by TFY members in `CfgRespawnInventory` format.  These loadouts can be automatically applied to certain NATO units, and can easily be updated.  
 
-It achieves this by recognizing what NATO units have been placed and automatically inferring the loadout based on the unit type.  This **ONLY WORKS WITH STANDARD NATO UNITS**.  
+It achieves this by recognizing what NATO units have been placed and automatically inferring the loadout based on the unit type.  This **ONLY WORKS WITH STANDARD NATO UNITS**.  (Now supports NATO Winter Faction https://steamcommunity.com/sharedfiles/filedetails/?id=2315104187)
 
 You can also override the default loadout, or have it work with unsupported unit types by manually entering the configuration.
 
