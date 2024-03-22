@@ -71,6 +71,7 @@ switch (_type) do
 		["NATO_WINTER_SOLDIER_MORT", ["TFY_Winter_Gunner"]],
 		["NATO_WINTER_SOLDIER_HEAVYGUNNER", ["TFY_Winter_Gunner"]],
 		["NATO_WINTER_SOLDIER_SL", ["TFY_Winter_Commander"]],
+		["NATO_WINTER_SOLDIER_UAV", ["TFY_Winter_UAVOperator"]]
 		];
 	};
 	case 1: {
