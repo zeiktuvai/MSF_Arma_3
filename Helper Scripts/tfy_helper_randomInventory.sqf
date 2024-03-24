@@ -25,7 +25,7 @@ private _items = ["ACE_Canteen", "ACE_epinephrine", "ACE_plasmaIV_500", "ACE_blo
 	"ACE_MRE_BeefStew", "ACE_MRE_CreamTomatoSoup", "ACE_MRE_CreamChickenSoup", "ACE_MRE_ChickenTikkaMasala", "ACE_MRE_SteakVegetables",
 	"ACE_MRE_MeatballsPasta", "ACE_MRE_ChickenHerbDumplings", "ACE_Humanitarian_Ration", "ACE_EarPlugs", "ACE_fieldDressing", "ACE_packingBandage",
 	"ACE_elasticBandage", "ACE_tourniquet", "ACE_splint", "ACE_morphine", "ACE_salineIV_500", "ACE_quikclot", "ACE_Can_RedGull", "ACE_Can_Franta", 
-	"ACE_Can_Spirit"];
+	"ACE_Can_Spirit", "ACE_WaterBottle"];
 
 private _mags = ["30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green_mag_Tracer", "30Rnd_65x39_caseless_black_mag", "30Rnd_65x39_caseless_black_mag_Tracer",
 	"100Rnd_65x39_caseless_black_mag", "100Rnd_65x39_caseless_black_mag_tracer", "Titan_AA", "MRAWS_HEAT_F", "7Rnd_408_Mag", "ACE_7Rnd_408_305gr_Mag",
