@@ -11,11 +11,13 @@
         string - name of action to show in progress bar and ace interaction.
 		code block - code to run on success
 		string - message to display on progress failure
+		bool - sets if the action can be run only once or multiple times. Can be omitted and will only be a one time action.
 
 	Examples:
 		Assuming you place this helper script into a folder called scripts in your root mission directory.  Placing the following code in your objects
 		init field will enable a one time ace interaction that runs a block of code on completion.
-		null = [this, 10, "Eat spaghetti", {hint "Mmmmmm! That was delicious!";}, "I was too full!!!"] execVM "scripts\tfy_helper_ace-progressbar.sqf";
+		
+		null = [this, 10, "Eat spaghetti", {hint "Mmmmmm! That was delicious!";}, "I was too full!!!", true] execVM "scripts\tfy_helper_ace-progressbar.sqf";
 
 		-- or --
 
@@ -23,15 +25,19 @@
 			hint "Mmmmmm! That was delicious!";
 			-- some other code
 		};
-		null = [this, 10, "Eat spaghetti", _finish, "I was too full!!!"] execVM "scripts\tfy_helper_ace-progressbar.sqf";
+		null = [this, 10, "Eat spaghetti", _finish, "I was too full!!!", false] execVM "scripts\tfy_helper_ace-progressbar.sqf";
 
-	Script version 1.0
-
-	TODO: Update for repeatable tasks so it never disables itself
+	Script version 1.1	
 */
 
-params ["_unit", "_timer", "_actionName", "_successCode", "_failureMessage"];
+params ["_unit", "_timer", "_actionName", "_successCode", "_failureMessage", "_isRepeatable"];
 _values = [_unit, _timer, _actionName, _successCode, _failureMessage];
+private ["_cond"];
+
+if (isNil "_isRepeatable") then
+{
+	_isRepeatable = false;
+};
 
 //Setup variable on object to hold action enablement.
 _unit setVariable ["actionEnabled", true, true];
@@ -60,11 +66,18 @@ private _statement = {
 };
 
 //Condition to check for enablement var on object.
-private _cond = {
+if (!_isRepeatable) then
+{
+	_cond = {
 	params ["_target", "_player", "_cparams"];
 	_cparams params ["_cvals"];
 
 	_cvals select 0 getVariable "actionEnabled";
+	};
+}
+else
+{
+	_cond = {true};
 };
 
 //Create action and add it to object.
