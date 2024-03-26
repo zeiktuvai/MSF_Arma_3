@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [Upcoming]
+- Added ace progress bar helper script
+
 ## [1.6]
 - Added support for NATO Winter Faction for winter maps.
 
