@@ -7,6 +7,7 @@
 	Implemented in: MSF v1.7
 */
 
+// Ace Extensions
 [
 	"MSF_ACEext_Unconcious",
 	"CHECKBOX",
@@ -15,6 +16,7 @@
 	[true]
 ] call CBA_fnc_addSetting;
 
+// MSF Settings
 [
 	"MSF_Base_RoP",
 	"CHECKBOX",
@@ -34,10 +36,28 @@
 ] call CBA_fnc_addSetting;
 
 [
+	"MSF_Base_NightLoadout",
+	"CHECKBOX",
+	["Enable Night Loadouts", "When enabled, switches out the standard camo pattern for black, adds NVGs and PEQ15s/Silencers to all classes."],
+	["MSF Settings", "Mission Settings"],
+	[false],
+	1
+] call CBA_fnc_addSetting;
+
+[
 	"MSF_Base_EndMission",
 	"CHECKBOX",
-	["Enable End Mission ACE Menu Item", "When enabled, an ACE menu item is added to allow certain roles to end the mission based on a trigger.  See Readme."],
+	["Enable End Mission ACE Menu Item", "When enabled, An ACE Menu Item is added to end the mission for the Commander and the GM. This requires a player unit to have the SL or GM variable (Or two units, one each), and a trigger with the variable of trig_end_mission. See Readme."],
 	["MSF Settings", "Mission Settings"],
-	[true],
+	[false],
+	1
+] call CBA_fnc_addSetting;
+
+[
+	"MSF_Base_GM_Menu",
+	"CHECKBOX",
+	["Enable GM Actions", "When enabled, adds special actions to the GM player unit.  This requires a unit have the variable GM to function properly."],
+	["MSF Settings", "Mission Settings"],
+	[false],
 	1
 ] call CBA_fnc_addSetting;
