@@ -13,6 +13,11 @@
 	Function Ver 1.0
 	Implemented in: MSF v1.7
 */
+
+
+
+
+/*
 params ["_unit"];
 private _values = [_unit];
 
@@ -48,4 +53,4 @@ _ace_ext = ["ace_ext", "MSF Extensions", "", {}, {true}] call ace_interact_menu_
 _unconsious_enable = ["unc_enable", "ACE Unconciousness","", _unc_code, {true}, {}, [_values]] call ace_interact_menu_fnc_createAction;
 
 [_unit, 1, ["ACE_SelfActions"], _ace_ext] call ace_interact_menu_fnc_addActionToObject;
-[_unit, 1, ["ACE_SelfActions", "ace_ext"], _unconsious_enable] call ace_interact_menu_fnc_addActionToObject;
+[_unit, 1, ["ACE_SelfActions", "ace_ext"], _unconsious_enable] call ace_interact_menu_fnc_addActionToObject; */

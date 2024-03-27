@@ -4,7 +4,7 @@
 	Mission Support Framework v1.0
 */
 // Declare variables
-private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions", "_ACE_Extensions"];
+private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions"];
 
 // Set default values
 _enableRespawnOnPlayer = true;
@@ -12,7 +12,6 @@ _RoPFaction = 0;
 _night = false;
 _ACE_endMission = false;
 _ACE_GM_Actions = false;
-_ACE_Extensions = true;
 
 // Try to get user configured settings
 Get_Settings = compile preprocessFile "MSF_Settings.sqf";
@@ -26,7 +25,6 @@ if (!isNil "_settings") then
 	_night = _settings get "_night";
 	_ACE_endMission = _settings get "_ACE_endMission";
 	_ACE_GM_Actions = _settings get "_ACE_GM_Actions";
-	_ACE_Extensions = _settings get "_ACE_Extensions";
 }
 else
 {
@@ -39,7 +37,6 @@ TFY_fnc_ApplyRespawnInventories = compile preprocessFile "MSF_Arma_3\Functions\T
 TFY_fnc_AddPlayerRespawn = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_AddPlayerRespawn.sqf";
 TFY_fnc_SetupGMActions = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_SetupGMActions.sqf";
 TFY_fnc_GetLoadoutByClass = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_GetLoadoutByClass.sqf";
-TFY_fncACE_MedicalUnconcious = compile preprocessFile "MSF_Arma_3\ACE_Extensions\TFY_fncACE_MedicalUnconcious";
 
 // Declare local variables
 private _playerClass = typeOf player;
@@ -143,4 +140,4 @@ if (_ACE_GM_Actions == true) then
 	};
 };
 
-[_playerObject] call TFY_fncACE_MedicalUnconcious;
+// [_playerObject] call TFY_fncACE_MedicalUnconcious;
