@@ -4,7 +4,7 @@
 	Mission Support Framework v1.0
 */
 // Declare variables
-private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions"];
+private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions", "_ACE_Extensions"];
 
 // Set default values
 _enableRespawnOnPlayer = true;
@@ -12,6 +12,7 @@ _RoPFaction = 0;
 _night = false;
 _ACE_endMission = false;
 _ACE_GM_Actions = false;
+_ACE_Extensions = true;
 
 // Try to get user configured settings
 Get_Settings = compile preprocessFile "MSF_Settings.sqf";
@@ -25,6 +26,7 @@ if (!isNil "_settings") then
 	_night = _settings get "_night";
 	_ACE_endMission = _settings get "_ACE_endMission";
 	_ACE_GM_Actions = _settings get "_ACE_GM_Actions";
+	_ACE_Extensions = _settings get "_ACE_Extensions";
 }
 else
 {

@@ -113,6 +113,11 @@ Adds special actions to the GM unit to add QOL features to gameplay. Avaliable G
 Update the following line in MSF_Settings:  
 `_ACE_GM_Actions =` (true: to enable; false: to disable).     
 
+# ACE Extensions
+
+Includes ACE Interaction menu extensions for making gameplay better.
+
+Right now the only one is disabling ACE Medical unconciousness by instantly killing the player if they go unconcious.  These are individually selected by player.
 
 [Change Log](/Docs/Changelog.md)  
 
