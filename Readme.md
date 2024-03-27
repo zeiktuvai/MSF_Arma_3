@@ -1,17 +1,26 @@
-# Mission Support Framwork for Arma 3
+# Mission Support Foundation for Arma 3
 
-This project started life as the DLS, but as the scope expanded and I started adding things outside of loadouts it seemed prudent to re-rganize the project.  
+This project started life as a set of scripts to automate applying custom loadouts to missions automatically (Formerly called the DLS), but as the scope expanded and I started adding things outside of loadouts it seemed prudent to re-rganize the project.  
 
 The MSF is a collection of tools wrapped into a script framework that makes building story driven missions much easier.  It includes all the custom loadout features of the DLS, but now includes other features related to mission creation and flow.  
 
-This framework makes use of ACE 3, which is needed for a lot of the custom interactions to work properly.  
+This framework makes use of ACE 3 (and by extionsion CBA), which is needed for a lot of the custom interactions to work properly.  
 
+## Table of Contents  
+
+[Getting Started](#getting-started)  
+[Updating](#updating)  
 [Loadout Management](#loadout-management)  
 [Respawn Features](#respawn-options)  
 [ACE 3 Interaction Features](#ace-interaction-features)  
+[ACE Extensions](#ace-extensions)  
 
-**Initial Setup**  
-1. Clone this repo into your mission folder using `git clone https://github.com/zeiktuvai/MSF_Arma_3.git` (You will be able to update it easily if new loadouts are added by moving into the `MSF_Arma_3` folder and running `git pull`).  
+[Change Log](/Docs/Changelog.md)  
+[How to update which loadouts are assigned](/Docs/Updating%20Assigned%20Loadouts.md)  
+
+# Getting Started
+
+1. Clone this repo into your mission folder using `git clone https://github.com/zeiktuvai/MSF_Arma_3.git` 
 
 2. Modify your `description.ext` to have the following code at the top: `#include "MSF_Arma_3\ClassConfig.cfg"`.  
 - (I have included one if you wish to use it, just copy it from the example files folder into your main mission folder).  
@@ -24,11 +33,18 @@ This framework makes use of ACE 3, which is needed for a lot of the custom inter
 
 The following is a walk through of the different parts of the MSF and how to configure/use them.  
 
+# Updating
+
+To update to the latest version, all you need to do is navigate to the `MSF_Arma_3` folder in your mission folder using your console of choice (Konsole, shell, cmd prompt, etc.) and running the `git pull` command.  This will pull any changes made to the MSF down to your mission (including loadouts and new features), then you just need to publish the mission again to take advantage of the chagnes.
+
+NOTE: Please be sure to check the change log to see if any changes need to be made to your settings file.
+
 # Loadout Management
 
 The MSF makes use of custom loadouts defined by TFY members in `CfgRespawnInventory` format.  These loadouts can be automatically applied to certain NATO units, and can easily be updated.  
 
-It achieves this by recognizing what NATO units have been placed and automatically inferring the loadout based on the unit type.  This **ONLY WORKS WITH STANDARD NATO UNITS**.  (Now supports NATO Winter Faction https://steamcommunity.com/sharedfiles/filedetails/?id=2315104187)
+It achieves this by recognizing what NATO units have been placed and automatically inferring the loadout based on the unit type.  This **ONLY WORKS WITH STANDARD NATO UNITS**.  
+(Now supports NATO Winter Faction https://steamcommunity.com/sharedfiles/filedetails/?id=2315104187)
 
 You can also override the default loadout, or have it work with unsupported unit types by manually entering the configuration.
 
@@ -115,10 +131,7 @@ Update the following line in MSF_Settings:
 
 # ACE Extensions
 
-Includes ACE Interaction menu extensions for making gameplay better.
+ACE Extensions is a group of options that can be changed to adjust how the mission plays and customize it to suit the players or mission makers needs.
 
-Right now the only one is disabling ACE Medical unconciousness by instantly killing the player if they go unconcious.  These are individually selected by player.
+These are exposed through the Addon Options section under settings from the pause menu.
 
-[Change Log](/Docs/Changelog.md)  
-
-[How to update which loadouts are assigned](/Docs/Updating%20Assigned%20Loadouts.md)

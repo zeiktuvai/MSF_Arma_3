@@ -4,7 +4,8 @@
 
 ## [1.7]
 - Added ace progress bar helper script
-- Added ACE Extensions section with one menu item to disable ACE Medical Unconciousness by instantly killing the player instead of going unconcious.
+- Added ACE Extensions. (This is a new section that aims to add different settings to the 'AddonOptions' settings menu to increase mission maker/player QOL).
+- Added ACE Extension to disable ACE Medical Unconciousness.
 
 ## [1.6]
 - Added support for NATO Winter Faction for winter maps.
