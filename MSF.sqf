@@ -37,6 +37,7 @@ TFY_fnc_ApplyRespawnInventories = compile preprocessFile "MSF_Arma_3\Functions\T
 TFY_fnc_AddPlayerRespawn = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_AddPlayerRespawn.sqf";
 TFY_fnc_SetupGMActions = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_SetupGMActions.sqf";
 TFY_fnc_GetLoadoutByClass = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_GetLoadoutByClass.sqf";
+TFY_fncACE_MedicalUnconcious = compile preprocessFile "MSF_Arma_3\ACE_Extensions\TFY_fncACE_MedicalUnconcious";
 
 // Declare local variables
 private _playerClass = typeOf player;
@@ -139,3 +140,5 @@ if (_ACE_GM_Actions == true) then
 		[_playerObject] call TFY_fnc_SetupGMActions;
 	};
 };
+
+// [_playerObject] call TFY_fncACE_MedicalUnconcious;
