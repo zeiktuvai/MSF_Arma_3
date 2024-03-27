@@ -20,5 +20,6 @@
 	"CHECKBOX",
 	["Enable End Mission ACE Menu Item", "When enabled, an ACE menu item is added to allow certain roles to end the mission based on a trigger.  See Readme."],
 	["MSF Settings", "Mission Settings"],
-	[true]
+	[true],
+	1
 ] call CBA_fnc_addSetting;
