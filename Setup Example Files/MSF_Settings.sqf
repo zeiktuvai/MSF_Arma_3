@@ -3,7 +3,7 @@
 //Enable respawn selection on each player.
 private _enableRespawnOnPlayer = true;
 
-//Set faction for player respawn positions (0: BLUFOR, 1: OPFOR, 2: INDEPENDANT)
+//Set faction for player respawn positions (0: BLUFOR, 1: OPFOR, 2: INDEPENDENT)
 private _RoPFaction = 0;
 
 //Enable Night Uniform

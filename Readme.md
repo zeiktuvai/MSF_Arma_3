@@ -110,7 +110,7 @@ Adds each player as a respawn point to select from;
 
 `_enableRespawnOnPlayer =` (true: to enable; false: to disable). 
 
-`_RoPFaction =` (0: BLUFOR, 1: OPFOR, 2: INDEPENDANT). 
+`_RoPFaction =` (0: BLUFOR, 1: OPFOR, 2: INDEPENDENT). 
     
 # ACE Interaction Features
 
