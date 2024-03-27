@@ -10,8 +10,8 @@
 [
 	"MSF_ACEext_Unconcious",
 	"CHECKBOX",
-	"Enable ACE Medical Player Unconciousness",
-	"MSF Settings",
+	["Enable ACE Medical Player Unconciousness", "When disabled, the player will die upon going unconcious instead of staying unconcious until being revived or bleeding out."],
+	["MSF Settings", "ACE Options"],
 	[true],
 	nil,
 	{}
