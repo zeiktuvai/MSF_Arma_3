@@ -1,7 +1,7 @@
 [
 	"MSF_ACEext_Unconcious",
 	"CHECKBOX",
-	"Disable/Enable ACE Medical Unconciousness",
+	"Enable/Disable ACE Medical Unconciousness",
 	"MSF Settings",
 	[true],
 	nil,
