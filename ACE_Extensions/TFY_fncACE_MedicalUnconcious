@@ -30,7 +30,7 @@ private _unc_code = {
 	}
 	else
 	{
-		hint "Enabling ACE Medical Unconciousness"
+		hint "Enabling ACE Medical Unconciousness";
 		_vals setVariable ["unconciousEnabled", true];
 	};
 

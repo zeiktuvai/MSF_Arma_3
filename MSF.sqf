@@ -141,4 +141,4 @@ if (_ACE_GM_Actions == true) then
 	};
 };
 
-// [_playerObject] call TFY_fncACE_MedicalUnconcious;
+[_playerObject] call TFY_fncACE_MedicalUnconcious;
