@@ -2,7 +2,8 @@
 	Author: zeik_tuvai
 
 	Description:
-		Part of MSF ACE Extensions.  This script enables an ace menu option to disable/enable unconciousness in ACE Medical.
+		Part of MSF ACE Extensions.  This script works with the MSF Settings area in addon options for enabling/disabling ACE
+		Medical unconciousness.
 
 	Parameter(s):
         object - Unit object (player or unit).
@@ -13,7 +14,6 @@
 	Function Ver 1.0
 	Implemented in: MSF v1.7
 */
-
 
 params ["_unit"];
 private _values = [_unit];

@@ -140,4 +140,5 @@ if (_ACE_GM_Actions == true) then
 	};
 };
 
-// [_playerObject] call TFY_fncACE_MedicalUnconcious;
+// ACE Extensions event handlers
+[_playerObject] call compile preprocessFileLineNumbers "ACE_Extensions\TFY_ACEex_MedicalUnconcious.sqf";

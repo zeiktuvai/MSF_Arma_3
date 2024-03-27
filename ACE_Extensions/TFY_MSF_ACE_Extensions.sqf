@@ -1,3 +1,12 @@
+/*
+	Author: zeik_tuvai
+
+	Description:
+		Part of MSF ACE Extensions.  Settings definitions for MSF Settings in addon options.
+		
+	Implemented in: MSF v1.7
+*/
+
 [
 	"MSF_ACEext_Unconcious",
 	"CHECKBOX",
