@@ -23,6 +23,6 @@ private _values = [_unit];
 
     if (player isEqualTo _unit && _state) then
     {         
-      if (MSF_ACEext_Unconcious) then {_unit setDamage 1;};
+      if (!MSF_ACEext_Unconcious) then {_unit setDamage 1;};
     };
 }] call CBA_fnc_addEventHandler;
