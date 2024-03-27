@@ -115,7 +115,7 @@ Adds each player as a respawn point to select from;
 # ACE Interaction Features
 
 *ACE End Mission Menu Option*  
-Upon activarion of a trigger, an ace self interaction option will be added to allow players to end the mission when they choose.  This requires
+Upon activation of a trigger, an ace self interaction option will be added to allow players to end the mission when they choose.  This requires
 that you have player units with the variable name `SL` (Squad Leadre/Commander) and/or `GM` (Game Master).  Also, your end mission trigger should be named `trig_end_mission`.  
 
 Update the following line in MSF_Settings:  
