@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [2.0]
+- Added all configuration options to the Addon Options menu under settings.
+- Added respawn delay option to settings.
+- Removed MSF_Settings.sqf
+
 ## [1.7]
 - Added ace progress bar helper script
 - Added ACE Extensions. (This is a new section that aims to add different settings to the 'AddonOptions' settings menu to increase mission maker/player QOL).

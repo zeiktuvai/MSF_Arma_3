@@ -22,12 +22,7 @@ This framework makes use of ACE 3 (and by extionsion CBA), which is needed for a
 
 1. Clone this repo into your mission folder using `git clone https://github.com/zeiktuvai/MSF_Arma_3.git` 
 
-2. Modify your `description.ext` to have the following code at the top: `#include "MSF_Arma_3\ClassConfig.cfg"`.  
-- (I have included one if you wish to use it, just copy it from the example files folder into your main mission folder).  
-- WARNING: Make sure your `description.ext` doesn't have any respawn properties in it, also make sure class CfgRoles and CfgRespawnInventory is not in the file.  
-
-3. In your `initPlayerLocal.sqf` (if you do not have one then you will have to create one) add the following code: `#include "MSF_Arma_3\MSF.sqf"` 
-- (I have included one if you wish to use it, just copy it from the example files folder into your main mission folder).  
+2. Copy the files from `Setup Example Files` to your root mission folder.  If those files exist, copy the contents of each into the corresponding file.
 
 After this is complete, you can configure all MSF settings by going to `Settings > Addon Options > MSF Settings`
 
@@ -51,9 +46,7 @@ Place your playable units on the map using the standard **NATO - MEN** (standard
 **Night Uniforms**  
 This includes night uniform versions that adds NVGS (TPNVG Mod) and appropriate weapon attachments like silencers and PEQs.  
 
-To enable, update your MSF_Settings.sqf:  
-
-`_night =` (true: to enable; false: to disable).  
+This can be enabled in MSF Settings under Addon Options.
 
 **Supported NATO Units**
 - Ammo Bearer
@@ -76,7 +69,7 @@ To enable, update your MSF_Settings.sqf:
 
 You can ignore the auto chosen loadout or if using units that are not supported, you can use this to apply loadouts to them.  In the units init add the following code:
 
-```c
+```sqf
     playerConfig = createHashMapFromArray[["initialLoadout","STARTING LOADOUT"],["respawnLoadouts",["RESPAWN","LOADOUTS"]]];
     this setVariable ["override", [playerConfig]];                
 ```
@@ -103,33 +96,30 @@ Remember if you put `["respawnLoadouts",["all"]]` in the respawn loadouts array 
 
 # Respawn Options
 
-*Respawn on Player*  
-Adds each player as a respawn point to select from;  
+**Respawn on Player**  
+This sets each player on the given side to be a respawn point for players to respawn on. 
 
-`_enableRespawnOnPlayer =` (true: to enable; false: to disable). 
+NOTE: This only affects the players playing on one side.  For example, if you choose BLUFOR then only those players will be able to respawn on each other.
 
-`_RoPFaction =` (0: BLUFOR, 1: OPFOR, 2: INDEPENDENT). 
+**Respawn Delay**  
+Overrides the default respawn timer of 15 seconds, configurable from 1 second to 5 minutes.
     
 # ACE Interaction Features
 
-*ACE End Mission Menu Option*  
+**ACE End Mission Menu Option**  
 Upon activation of a trigger, an ace self interaction option will be added to allow players to end the mission when they choose.  This requires
-that you have player units with the variable name `SL` (Squad Leadre/Commander) and/or `GM` (Game Master).  Also, your end mission trigger should be named `trig_end_mission`.  
+that you have player units with the variable name `SL` (Squad Leadre/Commander) and/or `GM` (Game Master).  
 
-Update the following line in MSF_Settings:  
-`_ACE_endMission =` (true: to enable; false: to disable).  
+Also, your end mission trigger should be named `trig_end_mission`.  
 
-*ACE GM Actions Menu Option*  
+**ACE GM Actions Menu Option**  
 Adds special actions to the GM unit to add QOL features to gameplay. Avaliable GM Actions:  
 - Reveal all enemies on map only to GM.  
 - Spawn an ACE Arsenal crate that can be interacted with to remove it when done.  
 
-Update the following line in MSF_Settings:  
-`_ACE_GM_Actions =` (true: to enable; false: to disable).     
+# ACE Options
 
-# ACE Extensions
-
-ACE Extensions is a group of options that can be changed to adjust how the mission plays and customize it to suit the players or mission makers needs.
-
-These are exposed through the Addon Options section under settings from the pause menu.
+**Disable ACE Medical Unconciousness**  
+This setting allows the Unconciousness system from ACE Medical to be enabled or disabled.  This works by running code when disabled that instantly
+kills the player when they fall unconcious instead of allowing them to wait to be revived or bleed out.
 
