@@ -12,7 +12,7 @@
 	"MSF_ACEext_Unconcious",
 	"CHECKBOX",
 	["Enable ACE Medical Player Unconciousness", "When disabled, the player will die upon going unconcious instead of staying unconcious until being revived or bleeding out."],
-	["MSF Settings", "ACE Options"],
+	["MSF Settings", "ACE Options - Client Configurable"],
 	[true]
 ] call CBA_fnc_addSetting;
 

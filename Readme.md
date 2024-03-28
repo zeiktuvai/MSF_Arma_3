@@ -119,6 +119,9 @@ Adds special actions to the GM unit to add QOL features to gameplay. Avaliable G
 
 # ACE Options
 
+These options are typically user configurable and do not need any configuration from the mission maker unless you want to force players into a
+specific setting.
+
 **Disable ACE Medical Unconciousness**  
 This setting allows the Unconciousness system from ACE Medical to be enabled or disabled.  This works by running code when disabled that instantly
 kills the player when they fall unconcious instead of allowing them to wait to be revived or bleed out.
