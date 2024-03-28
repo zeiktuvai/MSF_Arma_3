@@ -29,9 +29,7 @@ This framework makes use of ACE 3 (and by extionsion CBA), which is needed for a
 3. In your `initPlayerLocal.sqf` (if you do not have one then you will have to create one) add the following code: `#include "MSF_Arma_3\MSF.sqf"` 
 - (I have included one if you wish to use it, just copy it from the example files folder into your main mission folder).  
 
-4. Create a file in your root mission folder called `MSF_Settings.sqf` (Or copy the one in the example files folder into your root mission folder.) and update the settings to your needs. (See xxxxxx below for more information).  
-
-The following is a walk through of the different parts of the MSF and how to configure/use them.  
+After this is complete, you can configure all MSF settings by going to `Settings > Addon Options > MSF Settings`
 
 # Updating
 
