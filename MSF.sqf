@@ -1,35 +1,8 @@
 /*
 	Author: zeik_tuvai
 
-	Mission Support Framework v1.0
+	Mission Support Framework v2.0
 */
-// Declare variables
-private ["_enableRespawnOnPlayer", "_RoPFaction", "_night", "_ACE_endMission", "_ACE_GM_Actions"];
-
-// Set default values
-_enableRespawnOnPlayer = true;
-_RoPFaction = 0;
-_night = false;
-_ACE_endMission = false;
-_ACE_GM_Actions = false;
-
-// Try to get user configured settings
-Get_Settings = compile preprocessFile "MSF_Settings.sqf";
-private _settings = call Get_Settings;
-
-// If found set settings, if not throw error.
-if (!isNil "_settings") then
-{
-	_enableRespawnOnPlayer = _settings get "_enableRespawnOnPlayer";
-	_RoPFaction = _settings get "_RoPFaction";
-	_night = _settings get "_night";
-	_ACE_endMission = _settings get "_ACE_endMission";
-	_ACE_GM_Actions = _settings get "_ACE_GM_Actions";
-}
-else
-{
-	hint "EROR: MSF Not configured correctly! MSF_Settings.sqf not found, using defaults.";
-};
 
 // Register custom functions
 TFY_fnc_ApplyCustomLoadout = compile preprocessFile "MSF_Arma_3\Functions\TFY_fnc_ApplyCustomLoadout.sqf";
@@ -44,7 +17,7 @@ private _playerObject = player;
 _override = player getVariable ["override", nil];
 
 // Get class loadouts
-private _ldType = if (_night == true) then { 1 } else { 0 };
+private _ldType = if (MSF_Base_NightLoadout == true) then { 1 } else { 0 };
 private _playerLoadout = [_playerClass, _ldType] call TFY_fnc_GetLoadoutByClass;
 
 // Declare function variables
@@ -115,13 +88,13 @@ else
 };
 
 // Set each player as respawn point if enabled
-if(_enableRespawnOnPlayer == true) then
+if(MSF_Base_RoP == true) then
 {
-	[_playerObject, 0] call TFY_fnc_AddPlayerRespawn;
+	[_playerObject, MSF_Base_RoP_Side] call TFY_fnc_AddPlayerRespawn;
 };
 
 // Set end mission menu option 
-if(_ACE_endMission) then
+if(MSF_Base_EndMission) then
 {
 	if (vehicleVarName player == 'SL' || vehicleVarName player == 'GM') then 
 	{ 
@@ -132,7 +105,7 @@ if(_ACE_endMission) then
 };
 
 // GM Actions
-if (_ACE_GM_Actions == true) then
+if (MSF_Base_GM_Menu == true) then
 {
 	if (vehicleVarName player == 'GM') then 
 	{ 
