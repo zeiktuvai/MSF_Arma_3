@@ -41,7 +41,7 @@
 
 [
 	"MSF_Base_Respawn_Delay",
-	"LIST",
+	"SLIDER",
 	["Respawn Delay", "The time in seconds a player must wait to respawn."],
 	["MSF Settings", "Mission Settings - Respawn"],
 	[1, 300, 15, 0],
